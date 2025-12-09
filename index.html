@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<HTML lang="en">
+<htnml lang="en">
 
-<HEAD>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Responsive HTML & CSS</title>
-</HEAD>
+    <link rel="stylesheet" href="styles.css">
 
+</head>
 
 <body>
 
@@ -15,12 +16,12 @@
         <section class="form-container">
 
 
-            <img src="images/logo.svg" alt="Logo" class="logo-image">
+            <img src="assets/logo.webp" alt="Logo" class="logo-image">
 
 
-            <h3>Upgrade to Plus</h3>
+            <h3 class="form-title">Upgrade to Plus</h3>
 
-            <p>Upgrade today and take your AI-powered productivity to the next level.</p>
+            <p class="form-description">Upgrade today and take your AI-powered productivity to the next level.</p>
 
 
             <form action="#" class="checkout-form"> 
@@ -32,36 +33,49 @@
                     <input type="text" id="name" name="name" class="input-field" placeholder="Enter first & last name" required>
 
 
+              
+                </fieldset>
+
+
+                 <fieldset class="payment-method">
+                        <legend>Payment Details</legend>
+
+                        <div>
+                                <input type="radio" id="option-creditCard" name="paymentMethod" class="option" value="creditCard" required>
+                                <label for="option-creditCard">
+                                    <img src="images/icon-credit-card.svg" alt="Credit Card Icon" class="credit-card-icon">
+                                    <span>Credit Card</span>
+                                </label>    
+
+                                <input type="radio" id="option-bankTransfer" name="paymentMethod" class="option" value="bankTransfer" required>
+                                <label for="option-bankTransfer">
+                                    <img src="images/icon-bank-transfer.svg" alt="Bank Transfer Icon" class="bank-transfer-icon">
+                                    <span>Bank Transfer</span>
+                                </label>   
+                                
+                                
+                                    <input type="radio" id="option-points" name="paymentMethod" class="option" value="points" required>
+                                <label for="option-points">
+                                    <img src="images/icon-points.svg" alt="Points Icon" class="points-icon">
+                                    <span>Points</span>
+                                </label>   
+                        
+                        
+                        </div>
+                        
+
+
+                   </fieldset>
+
+
+                       <fieldset>
+
+                   
+
                     <label for="email">Email Address</label>
-                    <input type="text" id="email" name="email" class="input-field" placeholder="Enter email address" required>
+                    <input type="email" id="email" name="email" class="input-field" placeholder="Enter email address" required>
 
-                    <div class="card-info-label">
-
-                         <label>Payment Details</label>
-
-                        <input type="radio" id="option-creditCard" name="paymentMethod" class="option" value="creditCard" required>
-                        <label for="option-creditCard">
-                            <img src="images/icon-credit-card.svg" alt="Credit Card Icon" class="credit-card-icon">
-                            <h4>Credit Card</h4>
-                        </label>    
-
-                        <input type="radio" id="option-bankTransfer" name="paymentMethod" class="option" value="bankTransfer" required>
-                        <label for="option-bankTransfer">
-                            <img src="images/icon-bank-transfer.svg" alt="Bank Transfer Icon" class="bank-transfer-icon">
-                            <h4>Bank Transfer</h4>
-                        </label>   
-                        
-                        
-                            <input type="radio" id="option-points" name="paymentMethod" class="option" value="points" required>
-                        <label for="option-points">
-                            <img src="images/icon-points.svg" alt="Points Icon" class="points-icon">
-                            <h4>Points </h4>
-                        </label>    
-                        
-
-
-                    </div>
-
+                  
                 </fieldset>
 
          
@@ -73,7 +87,7 @@
 
                     <label for="country">Country</label>
                     
-                    <select id="country" name="country" class="input-field" required>
+                    <select id="country" name="country" class="select-country" required>
                         <option value="">Select your country</option>
                         <option>Afghanistan</option>
                         <option>Åland Islands</option>
@@ -338,8 +352,8 @@
 
 
              
-                <button type="button" class="cancel-button">Cancel</button>
-                <button type="submit" class="submit-button">Subscribe Now</button>  
+                <button type="reset" class="cancel-button">Cancel</button>
+                <button type="submit" class="submit-button">Subscribe</button>  
             
 
 
@@ -353,6 +367,55 @@
 
 
         <section class="select-plan-container">
+
+            <form action="#" class="select-plan-form">
+
+
+                <fieldset>
+                    <legend>Starter Plan</legend>
+               
+
+                    <input type="radio" id="option-plan-monthly" name="plan" class="option-plan" value="monthly" required>
+                        <label for="option-plan-monthly">
+                            <span>Pay monthly  </span>
+                            <span> $20 / Monthly / Member</span>
+                        </label>    
+
+
+                    <input type="radio" id="option-plan-annual" name="plan" class="option-plan" value="annual" required>
+                        <label for="option-plan-annual">
+                            <span>Pay annually  </span>
+                            <span> $16 / Annual / Member</span>
+                        </label>   
+                </fieldset>
+                        
+            
+                    </form>
+
+
+
+                    <div class="total-container">
+
+                        <div class="total-amount-container">
+                            <span>Total</span>
+                            <span id="total-amount">$20 / Month</span>
+                        </div>
+
+                        
+
+                        <div class="advertise-message">
+                            <img src="images/icon-info.svg" alt="Info Icon" class="info-icon">
+                            <span>This environment is for demonstration purposes only. 
+                                Please refrain from entering any actual sensitive data.</span>
+                        </div>
+
+                    </div>
+
+                    <figure class="dashboard-illustration">
+                        <img src="assets/cube.webp" alt="Dashboard mockup" loading="lazy">
+                    </figure>
+
+
 
 
 

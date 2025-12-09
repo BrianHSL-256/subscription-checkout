@@ -1,0 +1,160 @@
+
+
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow: hidden;
+  
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  --color-primary: #4d6bfe;
+  --color-secondary: #F0F4F7;
+  --color-bg: #f8f9fd;
+  --color-white: #ffffff;
+  --color-gray-dark: #656565;
+  --color-gray: #949494;
+  --color-text: #2e2e2e;
+
+  --radius: 0.8rem;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1.5rem;
+  
+
+}
+
+
+
+
+/* ===== FORM CONTAINER ===== */
+
+
+.form-container {
+     padding-right: 8rem;
+     padding-left: 3rem;
+     width: 60%;
+     height: 100%;
+}
+
+.logo-image {
+  width: 200px;
+
+}
+
+
+.form-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form-description {
+  font-size: 1rem;
+  color: var(--color-gray);
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+.checkout-form fieldset{
+    display: flex;
+    flex-direction: column;
+    border-style: none ;
+}
+
+
+.checkout-form fieldset > label, .payment-method legend{
+    color: var(--color-gray-dark);
+    font-weight: 500;
+}
+
+
+
+/* Input styles*/
+
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.select-country{
+    padding: 13px 15px;
+    border: 1px solid var(--color-gray);
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+}
+
+
+
+
+/* Buttons */
+
+
+.cancel-button {
+  background-color: var(--color-secondary);
+  border: none;
+  color: var(--color-text);
+
+  font-weight: 500;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+
+.submit-button {
+  background-color: #753EE4;
+  border: none;
+  color: var(--color-white);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+.submit-button:hover {
+  background-color: #5a2dbb;
+}
+
+
+
+
+/* ===== Select plan ===== */
+
+
+.select-plan-container {
+  background-color: var(--color-secondary);
+  padding: 2.5rem;
+  border-radius: 10px;
+  width: 40%;
+  height: 100%;
+}
+
+.dashboard-illustration img {
+  width: 120px;
+  border-radius: var(--radius);
+}
+
