@@ -57,19 +57,20 @@ body {
 
 .logo-image {
   width: 200px;
+  margin-left: -12px;
 
 }
 
 
 .form-title {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .form-description {
   font-size: 1rem;
   color: var(--color-gray);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 500;
 }
 
@@ -99,15 +100,104 @@ body {
     border-radius: 5px;
     font-size: 1rem;
     margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     border-radius: 5px;
 }
 
 
 
 
+/*Radio buttons styles*/
+
+
+.payment-method > div{
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-direction: row;
+}
+
+.payment-method input[type="radio"] {
+  display: none;
+}   
+
+
+.radio-button {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-self: start;
+    padding: 1rem;
+    
+    border: 1px solid var(--color-gray);
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    width: 33%;
+    height: 100px;
+}
+
+
+.radio-button:hover {
+  border-color: var(--color-primary);   
+
+}
+
+
+input[type="radio"]:checked + .radio-button {
+  background-color: #ECE9FC;
+  color: black;
+  border-color: #BDA3F3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.radio-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.payment-option-text {
+ 
+  font-weight: 600;
+  font-size: 1rem;
+  
+}
+
+
+
+
+/*Country and postal code styles*/
+
+.country-postal-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  
+}
+
+.country-select-container{
+  width: 50%;
+}
+
+.postal-code-container{
+    width: 50%;
+}
+
+.select-country {
+  width: 95%;  
+}
+
 /* Buttons */
 
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 20px;
+}
 
 .cancel-button {
   background-color: var(--color-secondary);
@@ -116,10 +206,11 @@ body {
 
   font-weight: 500;
   cursor: pointer;
-  padding: 13px 15px;
-  border-radius: 5px;
-  margin-right: 10px;
+  padding: 16px 15px;
+  border-radius: 8px;
+ 
   font-size: 1.2rem;
+  width: 15%; 
 }
 
 
@@ -129,14 +220,20 @@ body {
   color: var(--color-white);
   font-weight: 500;
   cursor: pointer;
-  padding: 13px 15px;
-  border-radius: 5px;
+  padding: 16px 15px;
+  border-radius: 8px;
   font-size: 1.2rem;
-  width: 80%;
+
+  width: 85%;
+  
 }
 
 .submit-button:hover {
   background-color: #5a2dbb;
+}
+
+.cancel-button:hover {
+  background-color: #d6dce3;
 }
 
 
