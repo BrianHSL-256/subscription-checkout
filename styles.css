@@ -13,7 +13,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
-  overflow: hidden;
+
   
 }
 
@@ -38,7 +38,7 @@ body {
   align-items: center;
   height: 100vh;
   padding: 1.5rem;
-  
+    overflow: hidden;
 
 }
 
@@ -248,6 +248,8 @@ input[type="radio"]:checked + .radio-button {
   border-radius: 10px;
   width: 40%;
   height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .dashboard-illustration img {
@@ -255,3 +257,291 @@ input[type="radio"]:checked + .radio-button {
   border-radius: var(--radius);
 }
 
+
+
+
+/*Plan text*/
+.select-plan-form > fieldset > legend {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+
+}
+
+
+
+
+.total-amount-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+.advertise-message{
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  font-weight: 500;
+  display: flex;
+}
+
+.info-icon {
+  width: 16px;
+  height: 16px;}
+
+
+/*Plan input styles*/
+.select-plan-form > fieldset {
+  border: none;
+
+}
+
+
+.option-plan-container {
+  
+  display: flex;
+  gap: 1rem;
+  border: 1.8px solid white;
+  border-radius: 10px;
+  padding: 12px 12px ;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  background-color: #FFFFFF;
+}
+
+
+.option-plan-container label{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 100%;
+  gap: 0.3rem;
+}
+
+input[type="radio"]:checked + .option-plan-container{
+  background-color: #d11e86;
+  
+}
+
+
+.option-plan-container:has(input[type="radio"]:checked) {
+  border-color: #5a2dbb;
+  background-color: #ECE9FC ;
+}
+
+
+
+/*Images inside plan options*/
+
+
+.dashboard-illustration{
+  width: 100%;
+   position: relative;
+ 
+
+}
+
+.dashboard-illustration img {
+  width: 100%;
+  position: absolute;
+  bottom: 100;
+  right: -150px;
+
+}
+
+
+
+
+
+
+
+
+/* ===== MEDIA QUERIES ===== */
+
+
+
+@media (min-width: 2500px) {
+  
+      
+        .dashboard-illustration img {
+          
+          bottom: 500;
+          right: -300px;
+
+        }
+
+
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+  
+      .cancel-button {
+          width: 30%; 
+        }
+
+
+        .submit-button { 
+          width: 70%;      
+        }
+            
+
+
+}
+
+
+
+@media (max-width: 1000px) {
+  
+          
+      .checkout-container {
+        flex-direction: column-reverse;
+        overflow: auto;
+        height: auto;
+        position: relative;
+
+
+      }
+
+      
+      .form-container {
+        
+          width: 100%;
+          height: 100%;
+         
+          padding-right: 1rem;
+          padding-left: 1rem;
+          position: relative;
+      }
+
+
+
+      .select-plan-container {
+         
+        
+          width: 100%;
+          height:650px;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          position: relative;
+
+      
+         
+        }
+
+
+              
+      .dashboard-illustration{
+        width: 100%;
+        position: relative;
+
+        bottom: 100;
+        right: -20px;
+
+      
+
+      }
+
+      .dashboard-illustration img {
+        width: 100%;
+      
+      }        
+
+
+}
+
+
+
+
+@media (max-width: 550px) {
+  
+  
+
+      .select-plan-container { 
+          height: 580px;
+        }
+          
+      .dashboard-illustration{
+        bottom: 100;
+        right: 50px;
+      }
+
+
+        .payment-method > div{
+          display: flex;
+          gap: 0.5rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          flex-direction: row;
+        }
+
+        .country-postal-container {
+          flex-direction: column;
+          width: 100%;
+          
+        }
+
+        .country-select-container{
+          width: 100%;
+        }
+
+        .postal-code-container{
+            width: 100%;
+        }
+
+        .select-country {
+          width: 100%;  
+        }
+
+  
+
+}
+
+
+
+@media (max-width: 370px) {
+  
+  
+
+      .select-plan-container { 
+          height: 550px;
+          padding: 1rem;
+        }
+          
+      .dashboard-illustration{
+        bottom: 100;
+        right: 65px;
+      }
+
+
+        .payment-method > div{
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          flex-direction: row;
+          justify-content: center;
+        
+        }
+
+
+        .radio-button {
+           
+            width: 46%;
+            height: 100px;
+            min-width: 46%
+        }
+
+      
+
+  
+
+}
